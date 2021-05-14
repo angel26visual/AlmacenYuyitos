@@ -1,0 +1,20 @@
+﻿<mah:MetroWindow x:Class="AlmacenYuyitos.VisualizarProveedor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:AlmacenYuyitos"
+        mc:Ignorable="d"
+        Title="Visualizar Proveedor - Los Yuyitos" Height="450" Width="800" ResizeMode="NoResize" Icon="resources/logo.png">
+    <Grid>
+        <Image Source="/resources/logo.png" Margin="312,0,312.6,293" />
+        <Label Content="FILTRAR POR RUT:" HorizontalAlignment="Left" Margin="121,129,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtRutProveedor" HorizontalAlignment="Left" Height="23" Margin="232,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBuscarProveedor" Content="BUSCAR" HorizontalAlignment="Left" Margin="373,126,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dgProveedor" HorizontalAlignment="Left" Height="164" Margin="121,181,0,0" VerticalAlignment="Top" Width="567"/>
+        <Button x:Name="btnVerProveedor" Content="VER PROVEEDOR" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="101" Click="btnVerProveedor_Click"/>
+        <Button x:Name="btnVolver" Content="VOLVER" HorizontalAlignment="Left" Margin="709,383,0,0" VerticalAlignment="Top" Width="75" Click="btnVolver_Click"/>
+
+    </Grid>
+</mah:MetroWindow>
