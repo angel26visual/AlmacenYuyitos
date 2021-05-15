@@ -5,13 +5,14 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlmacenYuyitos"
+      
         mc:Ignorable="d"
         Title="Consultar Productos - Los Yuyitos" Height="450" Width="800" ResizeMode="NoResize" Icon="resources/logo.png">
     <Grid>
         <Label Content="Código de Producto" Margin="50,101,626.6,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCodigoDeProducto" HorizontalAlignment="Left" Height="23" Margin="172,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnFiltrarPorCodProducto" Content="FILTRAR" HorizontalAlignment="Left" Margin="315,101,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Nombre de Producto:" HorizontalAlignment="Left" Margin="428,103,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre de Producto" HorizontalAlignment="Left" Margin="428,103,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNombreProducto" HorizontalAlignment="Left" Height="23" Margin="557,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnFiltrarNombreProducto" Content="FILTRAR" HorizontalAlignment="Left" Margin="682,101,0,0" VerticalAlignment="Top" Width="75"/>
         <DataGrid x:Name="dgProductos" HorizontalAlignment="Left" Height="185" Margin="50,157,0,0" VerticalAlignment="Top" Width="707"/>

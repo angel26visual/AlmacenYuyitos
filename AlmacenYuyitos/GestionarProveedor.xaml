@@ -6,24 +6,30 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:AlmacenYuyitos"
         mc:Ignorable="d"
-        Title="Gestionar Proveedor - Los Yuyitos" Height="450" Width="800" ResizeMode="NoResize" Icon="resources/logo.png">
-    <Grid>
-        <Button x:Name="btnAgregarProveedor" Content="AGREGAR PROVEEDOR" HorizontalAlignment="Left" Margin="91,122,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="DodgerBlue" Click="btnAgregarProveedor_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="btnVisualizarProveedor" Content="VISUALIZAR PROVEEDOR" HorizontalAlignment="Left" Margin="448,122,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="DodgerBlue" Click="btnVisualizarProveedor_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="btnVolverAlMenu" Content="VOLVER AL MENÚ" HorizontalAlignment="Left" Margin="275,271,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="White" Click="btnVolverAlMenu_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="btnCerrarSesión" Content="CERRAR SESIÓN" HorizontalAlignment="Left" Margin="698,10,0,0" VerticalAlignment="Top" Width="75" Click="btnCerrarSesión_Click"/>
+        Title="Gestionar Proveedor - Los Yuyitos" Height="450" Width="1116.217" ResizeMode="NoResize" Icon="resources/logo.png" Closed="MetroWindow_Closed">
+    <Grid Background="blue">
+        <Button x:Name="btnCerrarSesión" Content="CERRAR SESIÓN" HorizontalAlignment="Left" Margin="1008,10,0,0" VerticalAlignment="Top" Width="92" Click="btnCerrarSesión_Click" Height="30"/>
+        <Label Content="Rut:" HorizontalAlignment="Left" Margin="110,39,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="84,70,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Dirección:" HorizontalAlignment="Left" Margin="78,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.16,0.499" Foreground="White"/>
+        <Label Content="Teléfono de Contato 1:" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Teléfono de Contacto 2:" HorizontalAlignment="Left" Margin="4,163,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Nombre del Servidor:" HorizontalAlignment="Left" Margin="16,194,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Teléfono del Servidor:" HorizontalAlignment="Left" Margin="16,225,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtRutProveedor" HorizontalAlignment="Left" Height="23" Margin="162,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombreProveedor" HorizontalAlignment="Left" Height="23" Margin="162,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDireccionProveedor" HorizontalAlignment="Left" Height="23" Margin="162,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFonoProveedorUno" HorizontalAlignment="Left" Height="23" Margin="162,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFonoProveedor2" HorizontalAlignment="Left" Height="23" Margin="162,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombreServidor" HorizontalAlignment="Left" Height="23" Margin="162,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTelefonoServidor" HorizontalAlignment="Left" Height="23" Margin="162,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgProveedor" HorizontalAlignment="Left" Height="212" Margin="360,39,0,0" VerticalAlignment="Top" Width="618" Loaded="dgProveedor_Loaded" SelectionChanged="dgProveedor_SelectionChanged"/>
+        <Image Source="/resources/logo.png" Width="200" Height="200" Margin="536,225,373.6,-5" />
+        <Button x:Name="btnRegistrar" Content="REGISTRAR" HorizontalAlignment="Left" Margin="162,253,0,0" VerticalAlignment="Top" Width="120"  Height="39" Click="btnRegistrar_Click"/>
+        <Button x:Name="btnEliminar" Content="ELIMINAR" HorizontalAlignment="Left" Margin="19,256,0,0" VerticalAlignment="Top" Width="120" Click="btnEliminar_Click" Height="36"/>
+        <Button x:Name="btnActualizar" Content="ACTUALIZAR" HorizontalAlignment="Left" Margin="162,297,0,0" VerticalAlignment="Top" Width="120" Click="btnActualizar_Click" Height="43"/>
+        <Button x:Name="btnLimpiar" Content="LIMPIAR" HorizontalAlignment="Left" Margin="19,297,0,0" VerticalAlignment="Top" Width="120" Click="btnLimpiar_Click" Height="43"/>
+        <Button x:Name="btnAtras" Content="ATRÁS" HorizontalAlignment="Left" Margin="1008,391,0,0" VerticalAlignment="Top" Width="92" Height="29" Click="btnAtras_Click"/>
 
     </Grid>
 </mah:MetroWindow>
