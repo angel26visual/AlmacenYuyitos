@@ -39,7 +39,7 @@ namespace AlmacenYuyitos
         {
             try
             {
-                String sql = "SELECT CONTRASENA_USUARIO FROM TRABAJADOR WHERE NOM_USUARIO = :USUARIO";
+                String sql = "SELECT CONTRASENA_USUARIO, NOMBRE_TRAB, APELLIDO_TRAB, NOM_USUARIO FROM TRABAJADOR WHERE NOM_USUARIO = :USUARIO";
                 this.AUD(sql, 0);
             }
             catch (Exception) 
@@ -94,7 +94,10 @@ namespace AlmacenYuyitos
                         {
                             if (txtPass.Password == reader["CONTRASENA_USUARIO"].ToString())
                             {
-                                await this.ShowMessageAsync("INICIO DE SESIÓN", "Iniciando sesión");
+                                MainWindow main = new MainWindow(reader["NOM_USUARIO"].ToString());
+                                main.Show();
+                                main.btnCuenta.Content = "Bienvenido/a " + reader["NOMBRE_TRAB"] + " " + reader["APELLIDO_TRAB"];
+                                this.Close();
                             }
                             else
                             {
@@ -130,7 +133,7 @@ namespace AlmacenYuyitos
         public async void generarNuevaContrasena(string email)
         {
             Random rd = new Random(DateTime.Now.Millisecond);
-            int nuevaContrasena = rd.Next(100000, 999999);
+            int nuevaContrasena = rd.Next(1000000, 999999999);
             string contrasena = "" + nuevaContrasena;
             OracleCommand cmd = con.CreateCommand();
             String sql_mt = "UPDATE TRABAJADOR SET CONTRASENA_USUARIO = :CONTRASENA WHERE CORREO = :CORREO";
@@ -138,8 +141,8 @@ namespace AlmacenYuyitos
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("CONTRASENA", OracleDbType.Varchar2, 50).Value = contrasena.ToString();
             cmd.Parameters.Add("CORREO", OracleDbType.Varchar2, 100).Value = email.ToString();
-            /*try
-            {*/
+            try
+            {
             int n = cmd.ExecuteNonQuery();
                 if (n > 0)
                 {
@@ -149,11 +152,11 @@ namespace AlmacenYuyitos
                 {
                     await this.ShowMessageAsync("Error", "No se actualizo");
                 }
-            //}
-            /*catch (Exception exp)
+            }
+            catch (Exception exp)
             {
                 await this.ShowMessageAsync("Error", "No se envío nueva contraseña" + exp.Message);
-            }*/
+            }
 
         }
 

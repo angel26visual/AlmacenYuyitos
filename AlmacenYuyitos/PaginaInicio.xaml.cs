@@ -33,8 +33,8 @@ namespace AlmacenYuyitos
 
         private void btnMenuAdministrador_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+            /*MainWindow main = new MainWindow();
+            main.Show();*/
             this.Close();
         }
 

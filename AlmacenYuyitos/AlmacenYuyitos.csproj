@@ -131,6 +131,9 @@
     <Compile Include="ControlarRecepciones.xaml.cs">
       <DependentUpon>ControlarRecepciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cuenta.xaml.cs">
+      <DependentUpon>Cuenta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EstadoCivil.xaml.cs">
       <DependentUpon>EstadoCivil.xaml</DependentUpon>
     </Compile>
@@ -237,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlarRecepciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cuenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,8 +19,10 @@ namespace AlmacenYuyitos
     /// </summary>
     public partial class MainWindow 
     {
-        public MainWindow()
+        public static string nomUsuario { get; set; }
+        public MainWindow(string usuario)
         {
+            nomUsuario = usuario;
             InitializeComponent();
         }
 
@@ -28,14 +30,6 @@ namespace AlmacenYuyitos
         {
             PaginaInicio ini = new PaginaInicio();
             ini.Show();
-        }
-
-        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
-        {
-            Login inicio = new Login();
-            inicio.Show();
-            this.Close();
-            
         }
 
         private void btnGestionarUsuarios_Click(object sender, RoutedEventArgs e)
@@ -93,6 +87,25 @@ namespace AlmacenYuyitos
         {
             ControlarRecepciones cr = new ControlarRecepciones();
             cr.Show();
+            this.Close();
+        }
+
+        private void btnCuenta_Click(object sender, RoutedEventArgs e)
+        {
+            cuentaFlyouts.IsOpen = true;
+        }
+
+        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            Login inicio = new Login();
+            inicio.Show();
+            this.Close();
+        }
+
+        private void btnVerCuenta_Click(object sender, RoutedEventArgs e)
+        {
+            Cuenta cuenta = new Cuenta(nomUsuario);
+            cuenta.Show();
             this.Close();
         }
     }
