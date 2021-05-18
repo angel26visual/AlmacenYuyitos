@@ -39,7 +39,25 @@ namespace AlmacenYuyitos
             this.Close();
         }
 
-       
-            
+        private void btnCargarImg_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de Imagen (.jpg)|*.jpg|All Files (*.*)|*.*";
+            ofd.FilterIndex = 1;
+            ofd.Multiselect = false;
+
+          
+            BitmapImage foto = new BitmapImage();
+            foto.BeginInit();
+            foto.UriSource = new Uri(ofd.FileName);
+            foto.EndInit();
+            foto.Freeze();
+            imgFoto.Source = foto;
+                    
+
+
+              
+               
+        }
     }
 }

@@ -9,8 +9,7 @@
         Title="Agregar Productos - Los Yuyitos" Height="525.169" Width="800" ResizeMode="NoResize" Icon="resources/logo.png">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="18*"/>
+       
         </Grid.RowDefinitions>
         <Label Content="Nombre Producto:" HorizontalAlignment="Left" Margin="78,94,0,0" VerticalAlignment="Top"/>
         <Label Content="Precio de Venta:" HorizontalAlignment="Left" Margin="92,142,0,0" VerticalAlignment="Top"/>
@@ -39,8 +38,9 @@
         <Button x:Name="btnGuardarProducto" Content="GUARDAR" HorizontalAlignment="Left" Margin="227,225.2,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Button x:Name="btnCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="684,10,0,0" VerticalAlignment="Top" Width="100" Click="btnCerrarSesion_Click"/>
         <Label Content="Imagen Producto:" HorizontalAlignment="Left" Margin="92,79.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="891,79,-197.4,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-        <Image Grid.Column="1" x:Name="imgFoto" HorizontalAlignment="Left" Height="100" Margin="220,79.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-       
+        <Image x:Name="imgFoto" HorizontalAlignment="Left" Height="100" Margin="891,79,-197.4,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnCargarImg" Content="CARGAR IMAGEN" HorizontalAlignment="Left" Margin="78,105.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="107" />
+      
+
     </Grid>
 </mah:MetroWindow>
