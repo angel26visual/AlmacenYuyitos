@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-        
-        mc:Ignorable="d"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        
         
         Title="Gestionar Proveedor - Los Yuyitos" Height="499.907" Width="1116.217" ResizeMode="NoResize" Icon="resources/logo.png" Closed="MetroWindow_Closed">
     <Grid Background="blue">
@@ -102,6 +102,7 @@
         <DataGrid x:Name="dgProveedor" HorizontalAlignment="Left" Height="212" Margin="360,39,0,0" VerticalAlignment="Top" Width="618" Loaded="dgProveedor_Loaded" SelectionChanged="dgProveedor_SelectionChanged"/>
         <Image Source="/resources/logo.png" Width="200" Height="200" Margin="536,225,373.6,-5" />
         <Button x:Name="btnRegistrar" 
+                
                 Content="REGISTRAR"
                 HorizontalAlignment="Left" 
                 Margin="153,373,0,0"

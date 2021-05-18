@@ -61,7 +61,7 @@ namespace AlmacenYuyitos
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 OracleDataReader dr = cmd.ExecuteReader();
-                cmd.ExecuteNonQuery();
+                 
                 OracleDataAdapter oda = new OracleDataAdapter(cmd);
 
                 DataTable dt = new DataTable();

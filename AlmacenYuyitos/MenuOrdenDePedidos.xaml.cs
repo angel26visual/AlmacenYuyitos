@@ -44,5 +44,10 @@ namespace AlmacenYuyitos
             gop.Show();
             this.Close();
         }
+
+        private void btnVisualizarOrdenPedidos_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

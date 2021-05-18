@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -416,6 +416,39 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GenerarInfome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarPagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarProveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\OrdenDePedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarPromocion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarDelivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\ControlarRecepciones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
