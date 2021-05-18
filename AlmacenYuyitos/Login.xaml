@@ -9,7 +9,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         Title="Login - Los Yuyitos" Height="524.292" Width="466.745" Icon="resources/logo.png" ResizeMode="NoResize" WindowStartupLocation="Manual" Cursor="Arrow">
     
-        <!--Inicio menu izquierda-->
+        <!--Inicio menu izquierda inicio de sesion-->
     <Controls:MetroWindow.Flyouts>
         <Controls:FlyoutsControl x:Name="ControlesFlyouts">
             <Controls:Flyout x:Name="LoginFlyout"
@@ -72,6 +72,47 @@
                 </Grid>
 
             </Controls:Flyout>
+            <!--Inicio menu izquierda recuperar contraseña-->
+            <Controls:Flyout x:Name="RecuperarContraseñaFlyouts"
+                                 Header="Recuperar Contraseña"
+                                 Position="Right"
+                                 IsPinned="False"
+                                 IsOpen="false"
+                                 AnimateOnPositionChange="False"
+                                 AnimateOpacity="True"
+                                 IsModal="False"
+                                 Theme="Dark"
+                                 ExternalCloseButton="Left"
+                                 CloseButtonVisibility="Visible"
+                                 TitleVisibility="Visible"
+                                 AreAnimationsEnabled="True"
+                                 Width="400">
+                <Grid Width="400">
+                    <StackPanel Orientation="Vertical">
+                        <TextBox x:Name="txtCorreo" Margin="0,10,0,0"
+                                     Controls:TextBoxHelper.Watermark="Correo Electronico"
+                                     Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                     Controls:TextBoxHelper.ClearTextButton="True"
+                                     VerticalContentAlignment="Center"
+                                     HorizontalAlignment="Center"
+                                     Height="40"
+                                     Width="350"/>
+                        
+                        <Button x:Name="btnEnviarContrasena"
+                                    Style="{StaticResource MahApps.Metro.Styles.MetroCircleButtonStyle}"
+                                    Height="40" Width="40" Cursor="Hand"
+                                    Margin="20,10,0,0" Click="btnEnviarContrasena_Click"
+                                    ToolTip="Enviar Contraseña">
+                            <iconPacks:PackIconModern
+                                            Width="22" Height="22"
+                                            Kind="MessageSend"/>
+
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Controls:Flyout>
+            <!--Fin menu izquierda recuperar contraseña-->
+
         </Controls:FlyoutsControl>
     </Controls:MetroWindow.Flyouts>
     <!--Fin menu izquierda-->
