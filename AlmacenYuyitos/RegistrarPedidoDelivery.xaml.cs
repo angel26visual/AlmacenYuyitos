@@ -47,29 +47,7 @@ namespace AlmacenYuyitos
 
         private void btnGuardarPedidoDelivery_Click(object sender, RoutedEventArgs e)
         {
-            Delivery del = new Delivery();
-            del.Categoria = (Categorias)cboCategoria.SelectedIndex;
-            del.Producto = (Productos)cboProducto.SelectedIndex;
-            del.Cantidad = int.Parse(txtCantidad.Text);
-            del.NombreCliente = txtNombreCliente.Text;
-            del.FechaEntrega = (DateTime)dpFechaeEntrega.SelectedDate;
-            del.TelefonoContacto = int.Parse(txtTelefonoContacto.Text);
-            del.Direccion = txtDireccionDelivery.Text;
-            del.ValorDespacho = int.Parse(txtValorDespacho.Text);
             
-            del.Total = int.Parse(txtTotalDelivery.Text);
-
-            listasDelivery.Add(del);
-            MessageBox.Show("Registro Delivery Exitoso");
-            txtCantidad.Clear();
-            txtNombreCliente.Clear();
-            txtTelefonoContacto.Clear();
-            txtDireccionDelivery.Clear();
-            txtValorDespacho.Clear();
-
-
-
-           
             ActualizarDatos();
         }
 

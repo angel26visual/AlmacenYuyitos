@@ -95,5 +95,10 @@ namespace AlmacenYuyitos
             cr.Show();
             this.Close();
         }
+
+        private void btnGestionPromociones_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

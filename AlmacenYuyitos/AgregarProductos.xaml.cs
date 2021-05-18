@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -17,7 +18,7 @@ namespace AlmacenYuyitos
     /// <summary>
     /// Lógica de interacción para AgregarProductos.xaml
     /// </summary>
-    public partial class AgregarProductos 
+    public partial class AgregarProductos
     {
         public AgregarProductos()
         {
@@ -37,5 +38,8 @@ namespace AlmacenYuyitos
             log.Show();
             this.Close();
         }
+
+       
+            
     }
 }
