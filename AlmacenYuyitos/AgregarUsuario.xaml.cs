@@ -1,5 +1,4 @@
 ﻿
-
 using System.Data;
 using MahApps.Metro.Controls.Dialogs;
 
@@ -20,6 +19,8 @@ namespace AlmacenYuyitos
         {
             this.setConnection();
             InitializeComponent();
+            ActualizarCargo();
+            ActualizarEstado();
         }
 
         private void btnVolver_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -111,10 +112,7 @@ namespace AlmacenYuyitos
             }
 
         }
-        private void validar()
-        {
-
-        }
+     
 
         private async void btmGuardar_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -219,5 +217,4 @@ namespace AlmacenYuyitos
 
     }
 }
-
 
