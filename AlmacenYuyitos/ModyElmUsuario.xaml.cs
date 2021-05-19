@@ -146,12 +146,48 @@ namespace AlmacenYuyitos
                     if (n > 0)
                     {
                         await this.ShowMessageAsync("actualizado", "Usuario actualizado correctamente");
+                        VisualizarUsuario v = new VisualizarUsuario();
+                        this.Close();
+                        v.Show();
                        
                     }
                 }
                 catch (Exception )
                 {
                     await this.ShowMessageAsync("Error","no se pudo actualizar" );
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private async void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("RUT_TRAB", OracleDbType.Varchar2, 100).Value = txtRut.Text;
+                cmd.CommandText = "delete from trabajador where rut_trab = :RUT_TRAB";
+
+                try
+                {
+                    int n = cmd.ExecuteNonQuery();
+                    if (n > 0)
+                    {
+                        await this.ShowMessageAsync("eliminado", "Usuario eliminado correctamente");
+                        VisualizarUsuario v = new VisualizarUsuario();
+                        this.Close();
+                        v.Show();
+
+                    }
+                }
+                catch (Exception)
+                {
+                    await this.ShowMessageAsync("Error", "no se pudo eliminar");
                 }
             }
             catch (Exception)
