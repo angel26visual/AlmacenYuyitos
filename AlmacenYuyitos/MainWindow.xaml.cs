@@ -19,7 +19,7 @@ namespace AlmacenYuyitos
     /// </summary>
     public partial class MainWindow 
     {
-        public static string nomUsuario { get; set; }
+        string nomUsuario = string.Empty;
         public MainWindow(string usuario)
         {
             nomUsuario = usuario;
