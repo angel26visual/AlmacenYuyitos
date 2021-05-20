@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaLosYuyitos
 {
-    public class Delivery
+    public class Delivery 
     {
         private Categorias categoria;
         private Productos producto;
