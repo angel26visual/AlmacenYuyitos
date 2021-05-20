@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:AlmacenYuyitos"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="Menú Administrador - Los Yuyitos" Height="630.912" Width="1491.324" Icon="resources/logo.png" ResizeMode="NoResize">
     <!--Inicio menu izquierda inicio de sesion-->
