@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -119,10 +119,6 @@
     <Compile Include="AgregarProductos.xaml.cs">
       <DependentUpon>AgregarProductos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AgregarProveedor.xaml.cs">
-      <DependentUpon>AgregarProveedor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AllowableCharactersTextBoxBehavior.cs" />
     <Compile Include="ConsultarProductos.xaml.cs">
       <DependentUpon>ConsultarProductos.xaml</DependentUpon>
     </Compile>
@@ -131,9 +127,6 @@
     </Compile>
     <Compile Include="ControlarRecepciones.xaml.cs">
       <DependentUpon>ControlarRecepciones.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Cuenta.xaml.cs">
-      <DependentUpon>Cuenta.xaml</DependentUpon>
     </Compile>
     <Compile Include="EstadoCivil.xaml.cs">
       <DependentUpon>EstadoCivil.xaml</DependentUpon>
@@ -171,9 +164,6 @@
     <Compile Include="ModyElimProductos.xaml.cs">
       <DependentUpon>ModyElimProductos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModyElimProveedor.xaml.cs">
-      <DependentUpon>ModyElimProveedor.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ModyElmUsuario.xaml.cs">
       <DependentUpon>ModyElmUsuario.xaml</DependentUpon>
     </Compile>
@@ -207,9 +197,6 @@
     <Compile Include="VisualizarProductos.xaml.cs">
       <DependentUpon>VisualizarProductos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarProveedor.xaml.cs">
-      <DependentUpon>VisualizarProveedor.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VisualizarUsuario.xaml.cs">
       <DependentUpon>VisualizarUsuario.xaml</DependentUpon>
     </Compile>
@@ -221,10 +208,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AgregarProductos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AgregarProveedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,10 +224,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlarRecepciones.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Cuenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -298,10 +277,6 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MenuOrdenDePedidos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -315,10 +290,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ModyElimProductos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ModyElimProveedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -370,10 +341,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VisualizarProveedor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="VisualizarUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -384,9 +351,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MenuVendedor.xaml.cs">
       <DependentUpon>MenuVendedor.xaml</DependentUpon>
     </Compile>
@@ -420,10 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MahApps.Metro">
-      <Version>1.6.5</Version>
-    </PackageReference>
-    <PackageReference Include="MahApps.Metro.IconPacks">
-      <Version>4.1.0</Version>
+      <Version>2.4.4</Version>
     </PackageReference>
     <PackageReference Include="MahApps.Metro.Resources">
       <Version>0.6.1</Version>
@@ -452,6 +413,39 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GenerarInfome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarPagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarProveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\OrdenDePedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarPromocion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\GestionarDelivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\ControlarRecepciones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

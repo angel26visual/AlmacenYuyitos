@@ -1,18 +1,17 @@
-﻿<Controls:MetroWindow x:Class="AlmacenYuyitos.MainWindow"
+﻿<mah:MetroWindow x:Class="AlmacenYuyitos.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:AlmacenYuyitos"
-        mc:Ignorable="d"
-        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        Title="Menú Administrador - Los Yuyitos" Height="630.912" Width="1200" Icon="resources/logo.png" ResizeMode="NoResize">
-
+        mc:Ignorable="d"
+        Title="Menú Administrador - Los Yuyitos" Height="630.912" Width="1491.324" Icon="resources/logo.png" ResizeMode="NoResize">
     <!--Inicio menu izquierda inicio de sesion-->
-    <Controls:MetroWindow.Flyouts>
-        <Controls:FlyoutsControl x:Name="ControlesFlyouts">
-            <Controls:Flyout x:Name="cuentaFlyouts"
+    <mah:MetroWindow.Flyouts>
+        <mah:FlyoutsControl x:Name="ControlesFlyouts">
+            <mah:Flyout x:Name="cuentaFlyouts"
                                  Position="Top"
                                  IsPinned="False"
                                  IsOpen="false"
@@ -44,13 +43,13 @@
 
                 </Grid>
 
-            </Controls:Flyout>
-        </Controls:FlyoutsControl>
-    </Controls:MetroWindow.Flyouts>
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+    </mah:MetroWindow.Flyouts>
 
     <!--Inicio menu derecha-->
-    <Controls:MetroWindow.RightWindowCommands>
-        <Controls:WindowCommands>
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
             <Button Content="Bienvenido/a" Cursor="Hand" x:Name="btnCuenta" Click="btnCuenta_Click" >
                 <Button.ContentTemplate>
                     <DataTemplate>
@@ -66,60 +65,97 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-        </Controls:WindowCommands>
-    </Controls:MetroWindow.RightWindowCommands>
-
-    <Grid Margin="0, 0, 0, 0">
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    <Grid Margin="0,0,-6.2,-19.4" Background="Blue" >
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <Image Source="/resources/logo.png" Margin="346,-30,345.4,437.8"/>
-        <Button x:Name="btnGestionarUsuarios" Content="GESTIONAR USUARIOS" HorizontalAlignment="Left" Margin="29,132,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue" Click="btnGestionarUsuarios_Click">
+        <mah:Tile x:Name="btnGestionarUsuarios" Width="210" Height="180" Margin="29,132,1205.4,284.8" Click="btnGestionarUsuarios_Click" Background="Transparent" BorderBrush="{x:Null}"  Foreground="Transparent" ToolTip="Gestionar Usuarios">
+
+
+            <StackPanel>
+                <Image Source="/resources/GestionUsuarios.png" Height="137" Width="160" >
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+            </StackPanel>
+
+
+        </mah:Tile>
+
+
+        <mah:Tile x:Name="btnGestionarVentas" ToolTip="Gestionar Ventas" HorizontalAlignment="Left" Margin="261,132,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="btnGestionarVentas_Click">
+            <Image Source="/resources/GestionarVentas.png" Height="137" Width="160" >
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
+
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionarVentas" Content="GESTIONAR VENTAS" HorizontalAlignment="Left" Margin="261,132,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue" Click="btnGestionarVentas_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGenerarInforme" ToolTip="Generar Informe" HorizontalAlignment="Left" Margin="494,132,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent">
+            <Image Source="/resources/GenerarInfome.png" Height="180" Width="230" />
+
+
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGenerarInforme" Content="GENERAR INFORME" HorizontalAlignment="Left" Margin="494,132,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue">
+        </mah:Tile>
+        <mah:Tile x:Name="btnOrdenPedidos" ToolTip="Gestionar Orden de Pedidos" HorizontalAlignment="Left" Margin="29,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="btnOrdenPedidos_Click">
+            <Image Source="/resources/OrdenDePedidos.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnOrdenPedidos" Content="GESTIONAR ORDEN DE PEDIDOS" HorizontalAlignment="Left" Margin="29,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue" Click="btnOrdenPedidos_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionarClientes" ToolTip="Gestionar Clientes" HorizontalAlignment="Left" Margin="261,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="btnGestionarClientes_Click">
+            <Image Source="/resources/GestionarClientes.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionarClientes" Content="GESTIONAR CLIENTES" HorizontalAlignment="Left" Margin="261,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue" Click="btnGestionarClientes_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionarProductos" ToolTip="Gestionar Productos" HorizontalAlignment="Left" Margin="494,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="btnGestionarProductos_Click">
+            <Image Source="/resources/GestionarProductos.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionarProductos" Content="GESTIONAR PRODUCTOS" HorizontalAlignment="Left" Margin="494,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue" Click="btnGestionarProductos_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionarPagos" ToolTip="Gestionar Pagos" HorizontalAlignment="Left" Margin="733,132,0,0" VerticalAlignment="Top" Width="210" Height="180 " Background="Transparent" Foreground="Transparent" BorderBrush="Transparent">
+            <Image Source="/resources/GestionarPagos.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionPromociones" Content="GESTIONAR PROMOCIONES" HorizontalAlignment="Left" Margin="733,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="DodgerBlue">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionPromociones" ToolTip="Gestionar Promociones" HorizontalAlignment="Left" Margin="733,366,0,0" VerticalAlignment="Top" Width="210" Height="180" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" Click="btnGestionPromociones_Click">
+            <Image Source="/resources/GestionarPromocion.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionarProveedor" Content="GESTIONAR PROVEEDOR" HorizontalAlignment="Left"  Width="210" Background="DodgerBlue" Height="180" VerticalAlignment="Bottom" Margin="978,0,0,284.8" Click="btnGestionarProveedor_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionarProveedor" ToolTip="Gestionar Proveedor" HorizontalAlignment="Left"  Width="210"  Height="180" VerticalAlignment="Bottom" Margin="978,0,0,284.8" Click="btnGestionarProveedor_Click" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent">
+            <Image Source="/resources/GestionarProveedor.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
-        <Button x:Name="btnGestionarDelivery" Content="GESTIONAR DELIVERY" HorizontalAlignment="Left" Margin="978,366,0,0" VerticalAlignment="Top" Width="210" Height="180 " Background="DodgerBlue" Click="btnGestionarDelivery_Click">
+        </mah:Tile>
+        <mah:Tile x:Name="btnGestionarDelivery" ToolTip="Gestionar Delivery" HorizontalAlignment="Left" Margin="978,366,0,0" VerticalAlignment="Top" Width="210" Height="180 " Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Click="btnGestionarDelivery_Click">
+            <Image Source="/resources/GestionarDelivery.png" Height="137" Width="160" />
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-        </Button>
+        </mah:Tile>
+        <mah:Tile x:Name="btnControlarRecepciones" ToolTip="Controlar Recepciones" HorizontalAlignment="Left"  Width="210" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" Height="180" VerticalAlignment="Bottom" Margin="1217,0,0,144.8" Click="btnControlarRecepciones_Click">
+            <Image Source="/resources/ControlarRecepciones.png" Height="137" Width="160" />
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </mah:Tile>
+        <Image Source="/resources/GestionUsuarios.png" Margin="-404,93,1641.4,296.8" />
 
     </Grid>
-</Controls:MetroWindow>
+</mah:MetroWindow>

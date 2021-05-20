@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+
 
 namespace AlmacenYuyitos
 {
@@ -20,13 +22,15 @@ namespace AlmacenYuyitos
     /// </summary>
     public partial class VisualizarPedidoDelivery 
     {
+       
         public VisualizarPedidoDelivery()
         {
+          
             InitializeComponent();
      
         
         }
-
+       
 
         private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
@@ -47,5 +51,9 @@ namespace AlmacenYuyitos
             vid.Show();
             this.Close();
         }
+
+        
+
+       
     }
 }

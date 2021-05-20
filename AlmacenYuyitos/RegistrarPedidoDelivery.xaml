@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Registrar Pedido Delivery - Los Yuyitos" Height="450" Width="958.4" ResizeMode="NoResize" Icon="resources/logo.png">
     <Grid>
-        <Button x:Name="btnCerrarSesion" Content="CERRAR SESIÓN" HorizontalAlignment="Left" Margin="688,10,0,0" VerticalAlignment="Top" Width="96" Click="btnCerrarSesion_Click"/>
-        <Button x:Name="btnVolver" Content="VOLVER" HorizontalAlignment="Left" Margin="709,383,0,0" VerticalAlignment="Top" Width="75" Click="btnVolver_Click"/>
+        <Button x:Name="btnCerrarSesion" Content="CERRAR SESIÓN" HorizontalAlignment="Left" Margin="846,10,0,0" VerticalAlignment="Top" Width="96" Click="btnCerrarSesion_Click"/>
+        <Button x:Name="btnVolver" Content="VOLVER" HorizontalAlignment="Left" Margin="867,391,0,0" VerticalAlignment="Top" Width="75" Click="btnVolver_Click"/>
         <Label Content="Categoría:" HorizontalAlignment="Left" Margin="40,88,0,0" VerticalAlignment="Top"/>
         <Label Content="Producto:" HorizontalAlignment="Left" Margin="43,119,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="43,150,0,0" VerticalAlignment="Top"/>
@@ -30,6 +30,7 @@
         <TextBox x:Name="txtTotalDelivery" HorizontalAlignment="Left" Height="23" Margin="556,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
         <Button x:Name="btnGuardarPedidoDelivery" Content="GUARDAR PEDIDO" HorizontalAlignment="Left" Margin="145,328,0,0" VerticalAlignment="Top" Width="105" Click="btnGuardarPedidoDelivery_Click"/>
         <Button x:Name="btnEliminar" Content="ELIMINAR" HorizontalAlignment="Left" Margin="867,91,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnActualizarPedidoDelivery" Content="ACTUALIZAR" HorizontalAlignment="Left" Margin="145,352,0,0" VerticalAlignment="Top" Width="105"/>
 
     </Grid>
 </Window>

@@ -90,6 +90,11 @@ namespace AlmacenYuyitos
             this.Close();
         }
 
+        private void btnGestionPromociones_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btnCuenta_Click(object sender, RoutedEventArgs e)
         {
             cuentaFlyouts.IsOpen = true;
