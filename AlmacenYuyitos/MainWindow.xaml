@@ -1,9 +1,8 @@
-﻿<mah:MetroWindow x:Class="AlmacenYuyitos.MainWindow"
+﻿<Controls:MetroWindow x:Class="AlmacenYuyitos.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"   
         xmlns:local="clr-namespace:AlmacenYuyitos"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
@@ -158,4 +157,4 @@
         <Image Source="/resources/GestionUsuarios.png" Margin="-404,93,1641.4,296.8" />
 
     </Grid>
-</mah:MetroWindow>
+</Controls:MetroWindow>
